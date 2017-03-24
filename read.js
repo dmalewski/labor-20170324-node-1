@@ -1,13 +1,13 @@
 const fs = require("fs");
 
-fs.readFile("./readme.md",(err, content) => {
+fs.readFile('./readme.md',(err, content) => {
     if(err) {
-        throw err;
+        console.error(err.message);
 
         return;
     }
 
-    console.log(content);
-} );
+    console.log(content.toString("utf-8"));
+});
 
 console.log("Auslesen einer Datei");    
